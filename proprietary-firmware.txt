@@ -1,5 +1,6 @@
 # All proprietary files from this list, unless pinned and noted otherwise, are
-# from OPPO Reno (PCAM00_11_F.56).
+# from OPPO R17 (PBEM00_11_F.25).
+# Some image files are renamed.
 
 abl.img
 aop.img
@@ -11,7 +12,7 @@ devcfg.img
 DRIVER.img
 dsp.img
 hyp.img
-keymaster.img
+keymaster.img|0709d74723ab0a5e791a1ed2e03b31bc779b09e2
 modem.img
 msadp.img
 oppo_sec.img

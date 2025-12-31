@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_OP46B1.mk
+    $(LOCAL_DIR)/lineage_PBEM00.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_OP46B1-user \
-    lineage_OP46B1-userdebug \
-    lineage_OP46B1-eng
+    lineage_PBEM00-user \
+    lineage_PBEM00-userdebug \
+    lineage_PBEM00-eng

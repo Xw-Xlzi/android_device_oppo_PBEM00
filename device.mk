@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/oppo/OP46B1/OP46B1-vendor.mk)
+$(call inherit-product, vendor/oppo/PBEM00/PBEM00-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -89,10 +89,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-# Camera Helper
-PRODUCT_PACKAGES += \
-    OnePlusCameraHelper
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
@@ -139,12 +135,12 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.OP46B1 \
+    android.hardware.biometrics.fingerprint@2.3-service.PBEM00 \
     android.hardware.biometrics.fingerprint@2.3.vendor \
-    vendor.oplus.hardware.biometrics.fingerprint@2.1
+    vendor.oppo.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_PACKAGES += \
-    init.oplus.fingerprint.rc
+    init.oppo.fingerprint.rc
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -199,25 +195,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
-    com.android.nfc_extras \
-    libchrome.vendor \
-    NfcNci \
-    Tag
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
@@ -240,11 +217,11 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayOP46B1 \
-    FrameworkResOverlayOP46B1 \
-    LineageSdkResOP46B1 \
-    SystemUIOverlayOP46B1 \
-    TelephonyResOverlayOP46B1
+    CarrierConfigOverlayPBEM00 \
+    FrameworkResOverlayPBEM00 \
+    LineageSdkResPBEM00 \
+    SystemUIOverlayPBEM00 \
+    TelephonyResOverlayOP4PBEM00
 
 # Perf
 PRODUCT_PACKAGES += \
