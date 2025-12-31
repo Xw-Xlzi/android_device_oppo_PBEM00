@@ -81,7 +81,7 @@ persist.rild.nitz_short_ons_3=
 persist.vendor.radio.atfwd.start=true
 
 # SKU properties
-ro.product.property_source_order=odm,vendor,product,system_ext,system
+ro.product.property_source_order=vendor,product,system_ext,system
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
