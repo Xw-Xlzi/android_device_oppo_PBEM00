@@ -2,5 +2,5 @@ runtime_resource_overlay {
     name: "LineageSdkResPBEM00",
     theme: "LineageSdkResPBEM00",
     sdk_version: "current",
-    device_specific: true
+    vendor: true
 }
