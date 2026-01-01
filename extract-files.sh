@@ -53,7 +53,23 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-
+function blob_fixup() {
+	case "${1}" in
+		# Patch libs to load versioned libprotobuf from SDK 29, as SDK 32 removed some symbols
+        vendor/lib64/libwvhidl.so)
+        "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+        ;;
+		vendor/bin/sensors.qti)
+		"${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+		;;
+		vendor/lib64/libsensorcal.so)
+		"${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+		;;
+		vendor/lib64/hw/camera.qcom.so)
+		"${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+		;;
+	esac
+}
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
