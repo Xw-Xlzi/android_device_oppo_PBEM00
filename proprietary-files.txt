@@ -890,7 +890,7 @@ vendor/lib64/vendor.oppo.hardware.radio.opporadio@1.0.so
 # RIL
 product/app/QtiTelephonyService/QtiTelephonyService.apk
 product/etc/permissions/qcrilhook.xml
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml|923f2f692aa85f40dfa8b4b27ca6e99cfdb5dab9
 product/framework/qcrilhook.jar
 product/framework/qti-telephony-common.jar
 product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
