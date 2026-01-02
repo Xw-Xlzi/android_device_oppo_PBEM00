@@ -172,6 +172,7 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -445,29 +446,31 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# DPM
-framework/tcmclient.jar
-product/bin/dpmd
-product/etc/dpm/dpm.conf
-product/etc/init/dpmd.rc
-product/etc/permissions/com.qti.dpmframework.xml
-product/etc/permissions/dpmapi.xml
-product/framework/com.qti.dpmframework.jar
-product/framework/dpmapi.jar
-product/lib/com.qualcomm.qti.dpm.api@1.0.so
-product/lib/libdpmctmgr.so
-product/lib/libdpmfdmgr.so
-product/lib/libdpmframework.so
-product/lib/libdpmtcm.so
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so
-product/lib64/libdpmctmgr.so
-product/lib64/libdpmfdmgr.so
-product/lib64/libdpmframework.so
-product/lib64/libdpmtcm.so
-vendor/bin/dpmQmiMgr
-vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-vendor/lib64/libdpmqmihal.so
+# DPM - from Reno - RKQ1.201217.002
+framework/tcmclient.jar|cdd1ea7143a5a7acc3909b5cfa706650179647c7
+system_ext/bin/dpmd|33d90a04b4094ea346faa25c64c595071f70c26c
+system_ext/etc/dpm/dpm.conf|f2b3a4d8046c46aa7682a3ce4a51a90b76a9ed2d
+system_ext/etc/init/dpmd.rc|69c8ff42fbdbfeadd15cdc396abdecd081ee2130
+system_ext/etc/permissions/com.qti.dpmframework.xml|552c9cc49626e110dac2148593ab3ee586052bcf
+system_ext/etc/permissions/dpmapi.xml|804c13999b514e8464ab01c76625411dea051c0d
+system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
+system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
+system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so|133f0bb54be39eefa757eb95d6935779e32d8cce
+system_ext/lib/libdpmctmgr.so|5e4fdedb0745374bfe78c33e5df2c18b35ba6fde
+system_ext/lib/libdpmfdmgr.so|99cf46fc5f6e9793151199fe246428552c9c586f
+system_ext/lib/libdpmframework.so|fd592e4e68548a61690f78652e2a3e9776fd47e7
+system_ext/lib/libdpmtcm.so|4bbc27f0b9186e08e42e03642329b22fdb4b36cf
+system_ext/lib/vendor.qti.diaghal@1.0.so|7289c0165df0140036cb0a6794fc27d039b85ab5
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
+system_ext/lib64/libdpmctmgr.so|4a7f05a58f1f8ddf11ea035e7df98084a88125b3
+system_ext/lib64/libdpmfdmgr.so|0c264df0111928cbe18ef66dd99906e7b23ba325
+system_ext/lib64/libdpmframework.so|d48ce1b2e9f17e2e7a54b228c648cffcd988e06b
+system_ext/lib64/libdpmtcm.so|daeaf1165bbbf28db60e9a857e6ea0ed6d71ff2e
+system_ext/lib64/vendor.qti.diaghal@1.0.so|4ef9d68a995e89452479e9ba30218f0b2fd3d57f
+vendor/bin/dpmQmiMgr|4fe936478b0da1ee20c6222234b80d478a72cc2a
+vendor/etc/init/dpmQmiMgr.rc|d4d813ad5dbb955adac550c032607613fa58dae8
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|c5c893e86d38b8aa8cd277ccb8b011fb2f19995e
+vendor/lib64/libdpmqmihal.so|ffcd85e1f6bf7d54f37953edc2cb2c4a61fc894a
 
 # DRM (QSEECom)
 vendor/bin/qseecomd
@@ -508,17 +511,17 @@ vendor/firmware/widevine.b06
 vendor/firmware/widevine.b07
 vendor/firmware/widevine.mdt
 
-# Display (HDR)
-vendor/lib64/libhdr_tm.so
+# Display (HDR) - from Reno - RKQ1.201217.002
+vendor/lib64/libhdr_tm.so|7ac38563480eab0583cb440e667a44cfa596167a
 
-# Display (SDM)
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Display (SDM) - from Reno - RKQ1.201217.002
+vendor/lib64/libdisplayqos.so|c3d45315871e402053dd1f353e9bde5cbf757277
+vendor/lib64/libqseed3.so|e465ec47468012202edab549619ae3b33f29dfa4
+vendor/lib64/libsdm-color.so|a2b413dea186f9049cb596a6414efc2739694059
+vendor/lib64/libsdm-diag.so|1a99e15c4220e759abeefc0f4020e4a58f359a10
+vendor/lib64/libsdm-disp-vndapis.so|4c6916fed1e304effa4c06c7207fb0e1b604f3ae
+vendor/lib64/libsdmextension.so|70c18b044897825bc1f15f2b6f73b64b639b6d40
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Display (SDM) - from PNX - RKQ1.200906.002
 vendor/lib64/libsdedrm.so|5113b02d32b886281a790c8c323498195ec780f8
@@ -526,16 +529,19 @@ vendor/lib64/libsdedrm.so|5113b02d32b886281a790c8c323498195ec780f8
 # Display calibration
 vendor/etc/qdcm_calib_data_oppo18041samsung_ams653tk01_1080_2340_cmd_mode_dsi_panel.xml
 
-# Display postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/mm-pp-dpps
-vendor/bin/ppd
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display postprocessing - from Reno - RKQ1.201217.002
+vendor/bin/hw/vendor.display.color@1.0-service|a9d360976833d863f74df381298de696daea8acb
+vendor/bin/mm-pp-dpps|e825298dc12603df29c35aa6ad86fd0d0a7646a2
+vendor/bin/ppd|8b60669c32f091dd5832579892c91dc3eb0e8130
+vendor/etc/init/vendor.display.color@1.0-service.rc|3c94c5140dd1765d604c3d66bf11e9cb6022d832
+vendor/lib64/libdisp-aba.so|e76d6756cbb0532bc83ff98a06c4ca02fecdd8fe
+vendor/lib64/vendor.display.color@1.0.so|253cd210899ea79133c7b7b9d31429e4a8d43c32
+vendor/lib64/vendor.display.color@1.1.so|fe9b373785571bb890db27523b804dc7d4411bca
+vendor/lib64/vendor.display.color@1.2.so|f40eb8c9d39776c43448431d7c7f7ecc3e4506c3
+vendor/lib64/vendor.display.color@1.3.so|3fbe0a8a317789608848f35b39ed9bfb734f9ecc
+vendor/lib64/vendor.display.color@1.4.so|1396673668977af0a8afeaa64f891c3b356f958d
+vendor/lib64/vendor.display.color@1.5.so|f1c12eb133698917385d48913358eaffd9a10879
+vendor/lib64/vendor.display.postproc@1.0.so|e56b66d744dd77bd87afbb30cab558acf15709fb
 
 # FM
 lib64/fm_helium.so
@@ -547,7 +553,6 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d5cf2671e9e00f16bebcd8e3dc324
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|17e86e9a2054db733d955fcf1066f6e06a44fb21
 
 # Fingerprint
-vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 #odm/lib/hw/fingerprint.goodix_G2.default.so
 #odm/lib/hw/fingerprint.goodix_G3.default.so
 #odm/lib/hw/fingerprint.goodix_G5.default.so
@@ -564,11 +569,14 @@ vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 #odm/lib64/libgf_hal_G3.so
 #odm/lib64/libgf_hal_G5.so
 #odm/lib64/libgf_hal_G6.so
-#vendor/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so
+vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/qfp-daemon
 vendor/lib/vendor.oppo.hardware.commondcs@1.0.so
+vendor/lib64/android.frameworks.fingerprintservice@1.0.so
+vendor/lib64/libhypnusclient.so
 vendor/lib64/libqfp-service.so
 vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
+vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 
 # Firmware
 vendor/firmware/fastchg/18081/oppo_vooc_fw.bin
@@ -739,8 +747,9 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
+vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 
 # IPA
 vendor/etc/init/ipa_fws.rc
@@ -783,6 +792,7 @@ vendor/etc/system_properties.xml
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
+vendor/lib/libminksocket.so
 vendor/lib64/libminksocket.so
 
 # Motor
@@ -1130,9 +1140,13 @@ priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/wfdconfig.xml
+vendor/lib/libdisplayconfig.so
 vendor/lib/libFileMux_proprietary.so
+vendor/lib/libmmosal_proprietary.so
+vendor/lib/libmmparser_lite_proprietary.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
+vendor/lib/libOmxMux_proprietary.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdconfigutils_proprietary.so
@@ -1144,6 +1158,7 @@ vendor/lib/libwfdmmsrc_proprietary.so
 vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib/libwfdrtsp_proprietary.so
 vendor/lib/libwfdsessionmodule.so
+vendor/lib/libwfdsm_proprietary.so
 vendor/lib/libwfdsourcesession_proprietary.so
 vendor/lib/libwfdsourcesm_proprietary.so
 vendor/lib/libwfduibcinterface_proprietary.so
