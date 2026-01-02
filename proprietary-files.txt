@@ -1,13 +1,20 @@
 # Unpinned blobs from PBEM00-user 10 QKQ1.190918.001 1638515255 release-keys
 
 # ACDBs
-vendor/etc/acdbdata/18041/Bluetooth_cal.acdb
-vendor/etc/acdbdata/18041/General_cal.acdb
-vendor/etc/acdbdata/18041/Global_cal.acdb
-vendor/etc/acdbdata/18041/Handset_cal.acdb
-vendor/etc/acdbdata/18041/Hdmi_cal.acdb
-vendor/etc/acdbdata/18041/Headset_cal.acdb
-vendor/etc/acdbdata/18041/Speaker_cal.acdb
+vendor/etc/acdbdata/18085/Bluetooth_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Bluetooth_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/General_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Global_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Handset_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Hdmi_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Headset_cal.acdb
+vendor/etc/acdbdata/18085/CMCC/Speaker_cal.acdb
+vendor/etc/acdbdata/18085/General_cal.acdb
+vendor/etc/acdbdata/18085/Global_cal.acdb
+vendor/etc/acdbdata/18085/Handset_cal.acdb
+vendor/etc/acdbdata/18085/Hdmi_cal.acdb
+vendor/etc/acdbdata/18085/Headset_cal.acdb
+vendor/etc/acdbdata/18085/Speaker_cal.acdb
 
 # ADSP
 vendor/bin/adsprpcd
@@ -51,8 +58,8 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libqtigef.so
 
 # Audio firmware
-vendor/firmware/tfa98xx_18041.cnt
 vendor/firmware/dbmd4_va_fw.bin
+vendor/firmware/tfa98xx_18085.cnt
 
 # Audio soundtrigger
 vendor/lib/hw/sound_trigger.primary.sdm710.so
@@ -144,20 +151,20 @@ vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
@@ -172,7 +179,6 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
-vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -184,6 +190,7 @@ vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
 
 # Camera
 vendor/lib/hw/camera.qcom.so
@@ -519,7 +526,7 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 vendor/lib64/libsdedrm.so|5113b02d32b886281a790c8c323498195ec780f8
 
 # Display calibration
-vendor/etc/qdcm_calib_data_oppo18041samsung_ams653tk01_1080_2340_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_oppo18081samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml
 
 # Display postprocessing - from Reno - RKQ1.201217.002
 vendor/bin/hw/vendor.display.color@1.0-service|a9d360976833d863f74df381298de696daea8acb
@@ -571,10 +578,11 @@ vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
 vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 
 # Firmware
-vendor/firmware/fastchg/18081/oppo_vooc_fw.bin
-vendor/firmware/tp/18081/FW_S3706_SAMSUNG_FAE.img
-vendor/firmware/tp/18081/FW_S3706_SAMSUNG.img
-vendor/firmware/tp/18081/LIMIT_S3706_SAMSUNG.img
+vendor/firmware/fastchg/18085/oppo_vooc_fw.bin
+vendor/firmware/fastchg/18085/oppo_vooc_fw_n76e.bin
+vendor/firmware/tp/18085/FW_S3706_SAMSUNG.img
+vendor/firmware/tp/18085/FW_S3706_SAMSUNG_FAE.img
+vendor/firmware/tp/18085/LIMIT_S3706_SAMSUNG.img
 #odm/vendor/firmware/goodixfp.b00
 #odm/vendor/firmware/goodixfp.b01
 #odm/vendor/firmware/goodixfp.b02
@@ -678,16 +686,16 @@ vendor/lib64/vendor.qti.gnss@1.1.so
 vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
-vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@3.0-service.so
+vendor/lib64/vendor.qti.gnss@3.0.so
 
 # GNSS configs
-vendor/etc/gps.conf
-vendor/etc/izat.conf
-vendor/etc/sap.conf
 vendor/etc/apdr.conf
 vendor/etc/flp.conf
+vendor/etc/gps.conf
+vendor/etc/izat.conf
 vendor/etc/lowi.conf
+vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # IMS - from sake - 31.1010.0410.43
@@ -740,8 +748,8 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.0.so
-vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # IPA
 vendor/etc/init/ipa_fws.rc
@@ -810,7 +818,6 @@ lib/libmmosal.so
 lib64/libmmosal.so
 
 # Media configs
-vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_performance_v1.xml
@@ -818,6 +825,7 @@ vendor/etc/media_codecs_vendor.xml
 vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_codecs_vendor_v1.xml
 vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/system_properties.xml
 
@@ -1019,8 +1027,8 @@ vendor/bin/sensors.qti
 vendor/etc/init/hw/init.oppo.sensor.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/lib/libsnsapi.so
-vendor/lib/sensors.ssc.so
 vendor/lib/sensors.ap.so
+vendor/lib/sensors.ssc.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -1031,8 +1039,8 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.ap.so
+vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors configs
@@ -1100,8 +1108,8 @@ vendor/etc/sensors/config/tsl2540_0.json
 vendor/etc/sensors/sns_reg_config
 
 # Thermal engine
--vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine
+-vendor/lib64/libthermalclient.so
 
 # Thermal config
 vendor/etc/thermal-engine.conf
@@ -1142,15 +1150,14 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display
-framework/WfdCommon.jar
 bin/wfdservice
 etc/init/wfdservice.rc
 etc/wfdconfigsink.xml
+framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libwfdavenhancements.so
 lib/libwfdmmsrc_system.so
 lib/libwfdservice.so
-product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
 lib64/libwfdclient.so
@@ -1167,16 +1174,17 @@ lib64/libwfduibcsinkinterface.so
 lib64/libwfduibcsrc.so
 lib64/libwfduibcsrcinterface.so
 priv-app/WfdService/WfdService.apk
+product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/wfdconfig.xml
-vendor/lib/libdisplayconfig.so
 vendor/lib/libFileMux_proprietary.so
+vendor/lib/libOmxMux_proprietary.so
+vendor/lib/libdisplayconfig.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libmmparser_lite_proprietary.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libOmxMux_proprietary.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdconfigutils_proprietary.so
