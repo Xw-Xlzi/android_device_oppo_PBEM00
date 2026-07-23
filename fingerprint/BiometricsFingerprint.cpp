@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.PBEM00"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.PBEM00"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.2-service.PBEM00"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.2-service.PBEM00"
 
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
@@ -37,7 +37,7 @@ namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_3 {
+namespace V2_2 {
 namespace implementation {
 
 bool volatile dcDimState;
@@ -176,21 +176,87 @@ private:
     }
 };
 
-Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
+// IFingerprintInscreen implementation
+Return<int32_t> BiometricsFingerprint::getPositionX() {
+    return 411;
+}
+
+Return<int32_t> BiometricsFingerprint::getPositionY() {
+    return 1498;
+}
+
+Return<int32_t> BiometricsFingerprint::getSize() {
+    return 204;
+}
+
+Return<void> BiometricsFingerprint::onStartEnroll() {
+    set(DIMLAYER_PATH, 1);
+}
+
+Return<void> BiometricsFingerprint::onFinishEnroll() {
+    set(DIMLAYER_PATH, 0);
+    set(FP_PRESS_PATH, 0);
+}
+
+Return<void> BiometricsFingerprint::onPress() {
+    set(DIMLAYER_PATH, 1);
+    set(FP_PRESS_PATH, 1);
+    if (mInscreenCallback != nullptr) {
+        mInscreenCallback->onFingerDown();
+    }
+}
+
+Return<void> BiometricsFingerprint::onRelease() {
+    set(FP_PRESS_PATH, 0);
+    if (mInscreenCallback != nullptr) {
+        mInscreenCallback->onFingerUp();
+    }
+}
+
+Return<void> BiometricsFingerprint::onShowFODView() {
+    if (!mFodCircleVisible) {
+        dcDimState = get(DC_DIM_PATH, 0);
+        set(DC_DIM_PATH, 0);
+    }
+    mFodCircleVisible = true;
+    set(DIMLAYER_PATH, 1);
+}
+
+Return<void> BiometricsFingerprint::onHideFODView() {
+    if (mFodCircleVisible) {
+        set(DC_DIM_PATH, dcDimState);
+    }
+    set(DIMLAYER_PATH, 0);
+    set(FP_PRESS_PATH, 0);
+    mFodCircleVisible = false;
+}
+
+Return<bool> BiometricsFingerprint::handleAcquired(int32_t acquiredInfo, int32_t vendorCode) {
+    return acquiredInfo == FINGERPRINT_ACQUIRED_VENDOR;
+}
+
+Return<bool> BiometricsFingerprint::handleError(int32_t error, int32_t vendorCode) {
+    return false;
+}
+
+Return<void> BiometricsFingerprint::setLongPressEnabled(bool enabled) {
+    return Void();
+}
+
+Return<int32_t> BiometricsFingerprint::getDimAmount(int32_t cur_brightness) {
+    return cur_brightness;
+}
+
+Return<bool> BiometricsFingerprint::shouldBoostBrightness() {
     return true;
 }
 
-Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    set(DIMLAYER_PATH, 1);
-    set(FP_PRESS_PATH, 1);
+Return<void> BiometricsFingerprint::setCallback(const sp<IFingerprintInscreenCallback>& callback) {
+    mInscreenCallback = callback;
     return Void();
 }
 
-Return<void> BiometricsFingerprint::onFingerUp() {
-    set(FP_PRESS_PATH, 0);
-    return Void();
-}
-
+// IBiometricsFingerprint implementation
 Return<uint64_t> BiometricsFingerprint::setNotify(
         const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
     ALOGE("setNotify");
@@ -303,7 +369,7 @@ Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId, 
 }
 
 }  // namespace implementation
-}  // namespace V2_3
+}  // namespace V2_2
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
